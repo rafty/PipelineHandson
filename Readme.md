@@ -2,6 +2,8 @@
 
 # 前提
 
+- AWS Account
+  > region: ap-northeast-1
 - AWS CLI  
 - Pycharm  
   > - Plugin: AWS Cloudformation 
