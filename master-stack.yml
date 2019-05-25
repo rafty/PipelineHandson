@@ -1,0 +1,69 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation master stack
+
+Parameters:
+  System:
+    Type: String
+    Default: ecs
+  Stage:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - stg
+      - prd
+  VPCCidrBlock:
+    Type: String
+  InstanceType:
+    Type: String
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+
+Resources:
+  IAM:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: stacks/iam-stack.yml
+
+  Network:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: stacks/network-stack.yml
+      Parameters:
+        System: !Ref System
+        Stage: !Ref Stage
+        VPCCidrBlock: !Ref VPCCidrBlock
+
+  Custom:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: stacks/custom-stack.yml
+      Parameters:
+        LambdaAMIInfoRoleArn: !GetAtt IAM.Outputs.LambdaAMIInfoRoleArn
+
+  SecurityGrounp:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: stacks/security-group-stack.yml
+      Parameters:
+        System: !Ref System
+        Stage: !Ref Stage
+        VpcId: !GetAtt Network.Outputs.VpcId
+
+  Compute:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: stacks/compute-stack.yml
+      Parameters:
+        System: !Ref System
+        Stage: !Ref Stage
+        SecurityGroupId: !GetAtt SecurityGrounp.Outputs.SecurityGroupId
+        SubnetId: !GetAtt Network.Outputs.SubnetId
+        InstanceProfile: !GetAtt IAM.Outputs.InstanceProfile
+        ImageId: !GetAtt Custom.Outputs.ImageId
+        KeyName: !Ref KeyName
+        InstanceType: !Ref InstanceType
+
+Outputs:
+  PublicIp:
+    Value: !GetAtt Compute.Outputs.PublicIp
