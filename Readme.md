@@ -18,17 +18,8 @@
 # Cloudformation練習
 
 ```
-$ aws cloudformation create-stack \
---stack-name ecs-pipeline \
---region ap-northeast-1 \
---template-body file://master-stack.yml \
---capabilities CAPABILITY_NAMED_IAM \
---parameters \
-ParameterKey=System,ParameterValue=ecs \
-ParameterKey=Stage,ParameterValue=dev \
-ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
-ParameterKey=InstanceType,ParameterValue=t2.micro \
-ParameterKey=KeyName,ParameterValue=kdc-poc
+# KeyPairの確認 無ければ作成
+$ aws ec2 describe-key-pairs
 ```
 
 ```
@@ -50,7 +41,22 @@ InstanceType=t2.micro \
 KeyName=kdc-poc
 ```
 
+---
+> 以下は参考
 
+```
+$ aws cloudformation create-stack \
+--stack-name ecs-pipeline \
+--region ap-northeast-1 \
+--template-body file://master-stack.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=ecs \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
+ParameterKey=InstanceType,ParameterValue=t2.micro \
+ParameterKey=KeyName,ParameterValue=kdc-poc
+```
 
 ```
 $ aws cloudformation update-stack \
@@ -65,12 +71,6 @@ ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
 ParameterKey=InstanceType,ParameterValue=t2.micro \
 ParameterKey=KeyName,ParameterValue=kdc-poc
 ```
-
-```
-# KeyPairの確認
-$ aws ec2 describe-key-pairs
-```
-
 
 # 参考
 [Continuous Delivery of Nested AWS CloudFormation Stacks Using AWS CodePipeline](https://aws.amazon.com/jp/blogs/devops/continuous-delivery-of-nested-aws-cloudformation-stacks-using-aws-codepipeline/)  
