@@ -95,6 +95,23 @@ aws cloudformation update-stack \
 ParameterKey=System,ParameterValue=ecs-rsc
 ```
 
+# Stackの削除
+練習が終わったらprd,stg,dev stackを削除する手順  
+1. prd/stg/dev stackを削除  
+2. codepipelineで作成したS3 Bucketをコンソールから削除する  
+3. codepipelineのstackを削除する  
+
+もし以下のようなエラーが発生したら、ecs-rsc-pipeline-CFnRole-M7BGEV8E9AZ0というRoleを新規に作成する。  
+このロールを使用するサービスを選択 -> cloudformationを選択  
+Attach アクセス権限ポリシー -> AdministratorAccessを選択  
+-> 作成
+もう一度Stackを削除する  
+```
+Role arn:aws:iam::338456725408:role/ecs-rsc-pipeline-CFnRole-M7BGEV8E9AZ0 is invalid or cannot be assumed
+```
+
+
+
 # 参考
 [Continuous Delivery of Nested AWS CloudFormation Stacks Using AWS CodePipeline](https://aws.amazon.com/jp/blogs/devops/continuous-delivery-of-nested-aws-cloudformation-stacks-using-aws-codepipeline/)  
 ![](https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2017/06/07/Pipeline_vertical_design-2-362x1024.png)
