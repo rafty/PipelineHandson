@@ -49,8 +49,8 @@ Parameters:
   GithubOAuthToken:
     Type: String
     NoEcho: true
-    #Default: 1dbf303f38940fe854316e5110a2b89c9843d79b
     Default: a92c5f1e36ff3b4f097ecb4854ce527cbeae4ff5
+    #Default: 1dbf303f38940fe854316e5110a2b89c9843d79b
 
 Resources:
 
@@ -204,6 +204,8 @@ Resources:
             Value: !Ref CodeBuildBucket
       Source:
         Type: CODEPIPELINE
+
+        ???
 
   ProvisionPipeline:
     Type: AWS::CodePipeline::Pipeline
