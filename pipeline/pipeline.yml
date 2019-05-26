@@ -57,7 +57,7 @@ Resources:
   ArtifactBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Join ["-", ["Ref":"System", "Ref":"CodeBuildBucketName"]]
+      BucketName: !Join ["-", ["Ref":"System", "Ref":"ArtifactBucketName"]]
       VersioningConfiguration:
         Status: Enabled
   CodeBuildBucket:
