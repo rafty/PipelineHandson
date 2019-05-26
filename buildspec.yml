@@ -11,7 +11,7 @@ phases:
     commands:
       - echo "Validating CFN templates"
       - |
-        for cfn_template in stacks/* master-stacks.yml; do
+        for cfn_template in stacks/* master-stack.yml; do
           echo "Validating CloudFormation template file $cfn_template"
           aws cloudformation validate-template --template-body file://$cfn_template
         done
