@@ -109,7 +109,9 @@ Attach アクセス権限ポリシー -> AdministratorAccessを選択
 ```
 Role arn:aws:iam::338456725408:role/ecs-rsc-pipeline-CFnRole-M7BGEV8E9AZ0 is invalid or cannot be assumed
 ```
-
+__参考__  
+[StackOverflow](https://stackoverflow.com/questions/48709423/unable-to-delete-cfn-stack-role-is-invalid-or-cannot-be-assumed)  
+[Pipeline スターターキットで、AWS 上での継続的デリバリーをお試し](https://aws.typepad.com/sajp/2016/04/explore-continuous-delivery-in-aws-with-the-pipeline-starter-kit.html)  
 
 
 # 参考
