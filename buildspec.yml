@@ -7,7 +7,7 @@ phases:
       - |
         pip install -U pip
         pip install -r requirements.txt
-        npm install jsonlint -g
+        pip install jsonschema
   pre_build:
     commands:
       - echo "Validating CFN templates"
@@ -19,7 +19,7 @@ phases:
       - |
         for cfn_param in parameters/*; do
           echo "Validating CFN parameters config file $cfn_param"
-          jsonlint -q $cfn_param
+          jsonschema -i $cfn_param
         done
 
   build:
