@@ -28,6 +28,7 @@ phases:
 
 artifacts:
   files:
+    - packaged.yml
     - parameters/*
   discard-paths: yes
   # zipに含めるファイルのパスを省略するかどうか デフォルトではnoになっている

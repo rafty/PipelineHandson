@@ -202,11 +202,10 @@ Resources:
           - Name: AWS_REGION
             Value: !Ref AWS::Region
           - Name: S3_BUCKET
-            #Value: !Ref CodeBuildBucket
+            #Value: !Ref CodeBuildBucket 注意
             Value: !Ref ArtifactBucket
       Source:
         Type: CODEPIPELINE
-      #  ???
 
   ProvisionPipeline:
     Type: AWS::CodePipeline::Pipeline
@@ -233,6 +232,7 @@ Resources:
                 OAuthToken: !Ref GithubOAuthToken
               OutputArtifacts:
                 - Name: CFnTemplateOutput
+              RunOrder: 1
 
         #- Name: TempalateTest
         #  Actions:
@@ -265,6 +265,7 @@ Resources:
                 - Name: CFnTemplateArtifact
               Configuration:
                 ProjectName: !Ref BuildCfnProject
+              RunOrder: 1
 
         - Name: DevProvisioning
           # aws cloudformation deployの実行
