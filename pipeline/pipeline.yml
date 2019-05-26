@@ -203,7 +203,7 @@ Resources:
             Value: !Ref AWS::Region
           - Name: S3_BUCKET
             #Value: !Ref CodeBuildBucket
-            Value: !Ref ArtifactBucketName
+            Value: !Ref ArtifactBucket
       Source:
         Type: CODEPIPELINE
       #  ???
