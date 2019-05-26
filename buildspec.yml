@@ -16,18 +16,13 @@ phases:
           echo "Validating CloudFormation template file $cfn_template"
           aws cloudformation validate-template --template-body file://$cfn_template
         done
-      #- |
-      #  for cfn_param in parameters/*; do
-      #    echo "Validating CFN parameters config file $cfn_param"
-      #    jsonschema -i $cfn_param result.schema >$1
-      #  done
 
   build:
     commands:
       - echo "Copying child stack templates to S3"
       - |
         aws cloudformation package \
-          --template-file master-spec.yml \
+          --template-file master-stack.yml \
           --s3-bucket $S3_BUCKET \
           --output-template-file packaged.yml
 
