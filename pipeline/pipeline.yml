@@ -40,9 +40,10 @@ Parameters:
     Type: String
     Default: packaged.yml
   # Github repository
+  # https://github.com/rafty/pipeline-handson.git
   Repo:
     Type: String
-    Default: PipelineHandson
+    Default: pipeline-handson
   GithubOwner:
     Type: String
     Default: rafty
