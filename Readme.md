@@ -11,6 +11,7 @@
   > - Plugin: AWS Cloudformation 
   > - Pipenv python 3.7.3
 - Github Repository  
+  > - OAuthToken
 
 - AWS  
   > EC2 KeyPairの作成
@@ -31,13 +32,13 @@ $ aws cloudformation package \
 
 $ aws cloudformation deploy \
 --template-file /tmp/test-packed.yml \
---stack-name ecs-stack \
+--stack-name ecs-rsc-stack \
 --capabilities CAPABILITY_NAMED_IAM \
 --parameter-overrides \
-System=ecs \
+System=ecs-rsc \
 Stage=dev \
 VPCCidrBlock=10.0.0.0/24 \
-InstanceType=t2.micro \
+InstanceType=t2.nano \
 KeyName=kdc-poc
 ```
 
@@ -46,12 +47,12 @@ KeyName=kdc-poc
 
 ```
 $ aws cloudformation create-stack \
---stack-name ecs-pipeline \
+--stack-name ecs-rsc-pipeline \
 --region ap-northeast-1 \
 --template-body file://master-stack.yml \
 --capabilities CAPABILITY_NAMED_IAM \
 --parameters \
-ParameterKey=System,ParameterValue=ecs \
+ParameterKey=System,ParameterValue=ecs-rsc \
 ParameterKey=Stage,ParameterValue=dev \
 ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
 ParameterKey=InstanceType,ParameterValue=t2.micro \
@@ -60,12 +61,12 @@ ParameterKey=KeyName,ParameterValue=kdc-poc
 
 ```
 $ aws cloudformation update-stack \
---stack-name ecs-pipeline \
+--stack-name ecs-rsc-pipeline \
 --region ap-northeast-1 \
 --template-body file://master-stack.yml \
 --capabilities CAPABILITY_NAMED_IAM
 --parameters \
-ParameterKey=System,ParameterValue=ecs \
+ParameterKey=System,ParameterValue=ecs-rsc \
 ParameterKey=Stage,ParameterValue=dev \
 ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
 ParameterKey=InstanceType,ParameterValue=t2.micro \
@@ -75,3 +76,4 @@ ParameterKey=KeyName,ParameterValue=kdc-poc
 # 参考
 [Continuous Delivery of Nested AWS CloudFormation Stacks Using AWS CodePipeline](https://aws.amazon.com/jp/blogs/devops/continuous-delivery-of-nested-aws-cloudformation-stacks-using-aws-codepipeline/)  
 ![](https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2017/06/07/Pipeline_vertical_design-2-362x1024.png)
+[GitHub/CodeBuild/CodePipelineを利用してCloudFormationのCI/CDパイプラインを構築する](https://dev.classmethod.jp/cloud/aws/developing-cloudformation-ci-cd-pipeline-with-github-codebuild-codepipeline/)

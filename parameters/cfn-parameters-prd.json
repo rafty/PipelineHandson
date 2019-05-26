@@ -1,0 +1,9 @@
+{
+  "Parameters": {
+    "System": "ecs-rsc",
+    "Stage": "prd",
+    "VPCCidrBlock": "10.0.0.0/24",
+    "KeyName": "kdc-poc",
+    "InstanceType": "t2.nano"
+  }
+}
