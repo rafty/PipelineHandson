@@ -19,7 +19,7 @@ phases:
       - |
         for cfn_param in parameters/*; do
           echo "Validating CFN parameters config file $cfn_param"
-          jsonschema -i $cfn_param
+          jsonschema -i $cfn_param result.schema >$1
         done
 
   build:
