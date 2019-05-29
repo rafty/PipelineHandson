@@ -19,6 +19,8 @@
 # Cloudformation練習
 
 ![](./images/automation.svg)    
+![](./images/stack-sam.svg)  
+
 
 ```
 # KeyPairの確認 無ければ作成
