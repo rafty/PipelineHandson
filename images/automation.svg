@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="570 -387 549 348" width="549" height="348">
+  <defs>
+    <font-face font-family="Hiragino Sans" font-size="42" panose-1="2 11 6 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-75" underline-thickness="50" slope="0" x-height="562" cap-height="784" ascent="880.0018" descent="-120.00024" font-weight="600">
+      <font-face-src>
+        <font-face-name name="HiraginoSans-W6"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="40" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="32" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Hiragino Sans" font-size="32" panose-1="2 11 3 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-75" underline-thickness="50" slope="0" x-height="545" cap-height="766" ascent="880.0018" descent="-120.00024" font-weight="300">
+      <font-face-src>
+        <font-face-name name="HiraginoSans-W3"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="20" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.9.4 
+    <dc:date>2019-05-29 08:51:34 +0000</dc:date>
+  </metadata>
+  <g id="キャンバス______76" stroke-dasharray="none" fill="none" stroke="none" stroke-opacity="1" fill-opacity="1">
+    <title>キャンバス 76</title>
+    <rect fill="#2b3c4f" x="570" y="-387" width="549" height="348"/>
+    <g id="キャンバス______76: レイヤー 1">
+      <title>レイヤー 1</title>
+      <g id="Graphic_2">
+        <text transform="translate(765 -371.5)" fill="#a5a5a5">
+          <tspan font-family="Hiragino Sans" font-size="42" font-weight="600" fill="#a5a5a5" x="0" y="37">自動化</tspan>
+        </text>
+      </g>
+      <g id="Graphic_3">
+        <text transform="translate(590 -279.58014)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="40" font-weight="700" fill="white" x="0" y="39">Manual</tspan>
+        </text>
+      </g>
+      <g id="Graphic_4">
+        <text transform="translate(882 -279.58014)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="40" font-weight="700" fill="white" x="0" y="39">Automation</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <text transform="translate(912 -209.94801)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="32" font-weight="400" fill="white" x=".304" y="30">Declarative</tspan>
+          <tspan font-family="Hiragino Sans" font-size="32" font-weight="300" fill="white" x="32" y="67.896">宣言的</tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" font-weight="400" fill="white" y="67.896"> </tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <text transform="translate(585 -209.94801)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="32" font-weight="400" fill="white" x=".024" y="30">Imperative</tspan>
+          <tspan font-family="Hiragino Sans" font-size="32" font-weight="300" fill="white" x="27" y="67.896">命令的</tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" font-weight="400" fill="white" y="67.896"> </tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <text transform="translate(630 -101.56)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="white" x=".13" y="19">shell</tspan>
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="white" x="5.13" y="42.56">CLI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_9">
+        <text transform="translate(951 -92.28)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="20" font-weight="400" fill="white" x="0" y="19">template</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
