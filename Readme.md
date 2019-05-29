@@ -18,6 +18,8 @@
 
 # Cloudformation練習
 
+![](./images/automation.svg)    
+
 ```
 # KeyPairの確認 無ければ作成
 $ aws ec2 describe-key-pairs
