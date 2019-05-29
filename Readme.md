@@ -79,6 +79,8 @@ ParameterKey=KeyName,ParameterValue=kdc-poc
 
 # pipelineの実行
 
+![](./images/pipelilne-sam.svg)  
+
 ```
 aws cloudformation create-stack \
 --stack-name ecs-rsc-pipeline \
