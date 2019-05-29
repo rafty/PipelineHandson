@@ -114,6 +114,13 @@ __参考__
 [Pipeline スターターキットで、AWS 上での継続的デリバリーをお試し](https://aws.typepad.com/sajp/2016/04/explore-continuous-delivery-in-aws-with-the-pipeline-starter-kit.html)  
 
 
+# Pipeline概説
+
+![](./images/infra-pipeline1.svg)  
+![](./images/infra-pipeline2.svg)  
+![](./images/infra-pipeline3.svg)  
+
+
 # 参考
 [Continuous Delivery of Nested AWS CloudFormation Stacks Using AWS CodePipeline](https://aws.amazon.com/jp/blogs/devops/continuous-delivery-of-nested-aws-cloudformation-stacks-using-aws-codepipeline/)  
 ![](https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2017/06/07/Pipeline_vertical_design-2-362x1024.png)  
