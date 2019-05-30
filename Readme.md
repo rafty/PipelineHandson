@@ -22,6 +22,78 @@
 ![](./images/stack-sam.svg)  
 
 
+
+1.   
+
+aws cloudformation create-stack \
+--stack-name cfn-practice \
+--region ap-northeast-1 \
+--template-body file://cfn-practice/practice-1.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=cfn-prctc \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
+
+
+2.  
+
+```
+aws cloudformation update-stack \
+--stack-name cfn-practice \
+--region ap-northeast-1 \
+--template-body file://cfn-practice/practice-2.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=cfn-prctc \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
+```
+
+3.  
+
+```
+aws cloudformation update-stack \
+--stack-name cfn-practice \
+--region ap-northeast-1 \
+--template-body file://cfn-practice/practice-3.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=cfn-prctc \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
+```
+
+4.  
+
+```
+aws cloudformation update-stack \
+--stack-name cfn-practice \
+--region ap-northeast-1 \
+--template-body file://cfn-practice/practice-4.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=cfn-prctc \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
+```
+
+5.  
+```
+aws cloudformation update-stack \
+--stack-name cfn-practice \
+--region ap-northeast-1 \
+--template-body file://cfn-practice/practice-5.yml \
+--capabilities CAPABILITY_NAMED_IAM \
+--parameters \
+ParameterKey=System,ParameterValue=cfn-prctc \
+ParameterKey=Stage,ParameterValue=dev \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
+```
+
+----
+
+
 ```
 # KeyPairの確認 無ければ作成
 $ aws ec2 describe-key-pairs
