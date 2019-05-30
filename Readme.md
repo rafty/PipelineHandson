@@ -41,7 +41,7 @@ $ aws cloudformation deploy \
 --parameter-overrides \
 System=ecs-rsc \
 Stage=dev \
-VPCCidrBlock=10.0.0.0/24 \
+VPCCidrBlock=10.0.0.0/16 \
 InstanceType=t3.nano \
 KeyName=kdc-poc
 ```
@@ -58,7 +58,7 @@ $ aws cloudformation create-stack \
 --parameters \
 ParameterKey=System,ParameterValue=ecs-rsc \
 ParameterKey=Stage,ParameterValue=dev \
-ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
 ParameterKey=InstanceType,ParameterValue=t3.nano \
 ParameterKey=KeyName,ParameterValue=kdc-poc
 ```
@@ -72,7 +72,7 @@ $ aws cloudformation update-stack \
 --parameters \
 ParameterKey=System,ParameterValue=ecs-rsc \
 ParameterKey=Stage,ParameterValue=dev \
-ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/24 \
+ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
 ParameterKey=InstanceType,ParameterValue=t3.nano \
 ParameterKey=KeyName,ParameterValue=kdc-poc
 ```
