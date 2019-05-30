@@ -25,6 +25,7 @@
 
 1.   
 
+```
 aws cloudformation create-stack \
 --stack-name cfn-practice \
 --region ap-northeast-1 \
@@ -34,7 +35,7 @@ aws cloudformation create-stack \
 ParameterKey=System,ParameterValue=cfn-prctc \
 ParameterKey=Stage,ParameterValue=dev \
 ParameterKey=VPCCidrBlock,ParameterValue=10.0.0.0/16 \
-
+```
 
 2.  
 
